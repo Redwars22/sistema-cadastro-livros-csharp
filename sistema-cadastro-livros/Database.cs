@@ -1,4 +1,6 @@
 ﻿using System;
+using Gtk;
+
 namespace sistemacadastrolivros
 {
     public class Database
@@ -16,7 +18,7 @@ namespace sistemacadastrolivros
 
         }
 
-        public void AddItem()
+        public void AddItem(string Item)
         {
 
         }

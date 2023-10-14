@@ -6,10 +6,10 @@
   <import>
     <widget-library name="../bin/Debug/sistema-cadastro-livros.exe" internal="true" />
   </import>
-  <widget class="Gtk.Window" id="MainWindow" design-size="754 484">
+  <widget class="Gtk.Window" id="MainWindow" design-size="776 572">
     <property name="MemberName" />
     <property name="Title" translatable="yes">MainWindow</property>
-    <property name="WindowPosition">CenterOnParent</property>
+    <property name="WindowPosition">Center</property>
     <signal name="DeleteEvent" handler="OnDeleteEvent" />
     <child>
       <widget class="Gtk.Fixed" id="fixed1">
@@ -37,6 +37,7 @@
             <property name="Icon">stock:gtk-add Menu</property>
             <property name="Label" translatable="yes">Adicionar</property>
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnButton2Clicked" />
           </widget>
           <packing>
             <property name="X">97</property>
@@ -72,14 +73,20 @@
           </packing>
         </child>
         <child>
+          <placeholder />
+        </child>
+        <child>
+          <placeholder />
+        </child>
+        <child>
           <widget class="Gtk.ScrolledWindow" id="GtkScrolledWindow">
             <property name="MemberName" />
             <property name="ShadowType">In</property>
             <child>
               <widget class="Gtk.TextView" id="textview2">
                 <property name="MemberName" />
-                <property name="WidthRequest">300</property>
-                <property name="HeightRequest">300</property>
+                <property name="WidthRequest">750</property>
+                <property name="HeightRequest">500</property>
                 <property name="CanFocus">True</property>
                 <property name="ShowScrollbars">True</property>
                 <property name="Text" translatable="yes" />
@@ -87,8 +94,262 @@
             </child>
           </widget>
           <packing>
-            <property name="X">40</property>
-            <property name="Y">101</property>
+            <property name="X">11</property>
+            <property name="Y">57</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="button1">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Type">TextAndIcon</property>
+            <property name="Icon">stock:gtk-about Menu</property>
+            <property name="Label" translatable="yes">Sobre</property>
+            <property name="UseUnderline">True</property>
+          </widget>
+          <packing>
+            <property name="X">363</property>
+            <property name="Y">5</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+  <widget class="Gtk.Window" id="sistemacadastrolivros.NewItem" design-size="405 265">
+    <property name="MemberName" />
+    <property name="Title" translatable="yes">Edição de Livro</property>
+    <property name="Icon">stock:gtk-edit Menu</property>
+    <property name="WindowPosition">Center</property>
+    <child>
+      <widget class="Gtk.Fixed" id="fixed1">
+        <property name="MemberName" />
+        <property name="HasWindow">False</property>
+        <child>
+          <widget class="Gtk.Label" id="label1">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">Título</property>
+          </widget>
+          <packing>
+            <property name="X">15</property>
+            <property name="Y">3</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Entry" id="TitleInput">
+            <property name="MemberName" />
+            <property name="WidthRequest">375</property>
+            <property name="CanFocus">True</property>
+            <property name="IsEditable">True</property>
+            <property name="InvisibleChar">•</property>
+          </widget>
+          <packing>
+            <property name="X">15</property>
+            <property name="Y">20</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="label2">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">Autor</property>
+          </widget>
+          <packing>
+            <property name="X">15</property>
+            <property name="Y">58</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Entry" id="AuthorInput">
+            <property name="MemberName" />
+            <property name="WidthRequest">375</property>
+            <property name="CanFocus">True</property>
+            <property name="IsEditable">True</property>
+            <property name="InvisibleChar">•</property>
+          </widget>
+          <packing>
+            <property name="X">15</property>
+            <property name="Y">80</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="label3">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">ISBN</property>
+          </widget>
+          <packing>
+            <property name="X">15</property>
+            <property name="Y">119</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Entry" id="ISBNInput">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="IsEditable">True</property>
+            <property name="InvisibleChar">•</property>
+          </widget>
+          <packing>
+            <property name="X">15</property>
+            <property name="Y">142</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Entry" id="GenreInput">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="IsEditable">True</property>
+            <property name="InvisibleChar">•</property>
+          </widget>
+          <packing>
+            <property name="X">222</property>
+            <property name="Y">143</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="label5">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">Idioma</property>
+          </widget>
+          <packing>
+            <property name="X">15</property>
+            <property name="Y">181</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Entry" id="LanguageInput">
+            <property name="MemberName" />
+            <property name="WidthRequest">100</property>
+            <property name="CanFocus">True</property>
+            <property name="IsEditable">True</property>
+            <property name="InvisibleChar">•</property>
+          </widget>
+          <packing>
+            <property name="X">15</property>
+            <property name="Y">207</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="label6">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">Número de Páginas</property>
+          </widget>
+          <packing>
+            <property name="X">132</property>
+            <property name="Y">181</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.SpinButton" id="PageCount">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Lower">1</property>
+            <property name="Upper">9999</property>
+            <property name="PageIncrement">10</property>
+            <property name="StepIncrement">1</property>
+            <property name="ClimbRate">1</property>
+            <property name="Numeric">True</property>
+            <property name="Value">1</property>
+          </widget>
+          <packing>
+            <property name="X">132</property>
+            <property name="Y">208</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="label4">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">Gênero</property>
+          </widget>
+          <packing>
+            <property name="X">224</property>
+            <property name="Y">119</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="NewBook">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Type">TextAndIcon</property>
+            <property name="Icon">stock:gtk-new Menu</property>
+            <property name="Label" translatable="yes">Cadastrar Livro</property>
+            <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnButton2Clicked" />
+          </widget>
+          <packing>
+            <property name="X">244</property>
+            <property name="Y">208</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+  <widget class="Gtk.Dialog" id="sistemacadastrolivros.ErrorMessageForm" design-size="373 148">
+    <property name="MemberName" />
+    <property name="Title" translatable="yes">Ocorreu um problema</property>
+    <property name="Icon">stock:gtk-close Menu</property>
+    <property name="WindowPosition">CenterOnParent</property>
+    <property name="Buttons">1</property>
+    <property name="HelpButton">False</property>
+    <child internal-child="VBox">
+      <widget class="Gtk.VBox" id="dialog1_VBox">
+        <property name="MemberName" />
+        <property name="BorderWidth">2</property>
+        <child>
+          <widget class="Gtk.Fixed" id="fixed3">
+            <property name="MemberName" />
+            <property name="HeightRequest">100</property>
+            <property name="HasWindow">False</property>
+            <child>
+              <widget class="Gtk.Image" id="image62">
+                <property name="MemberName" />
+                <property name="Pixbuf">stock:gtk-dialog-error Menu</property>
+              </widget>
+              <packing>
+                <property name="X">7</property>
+                <property name="Y">14</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="Gtk.Label" id="ErrorMessageLabel">
+                <property name="MemberName" />
+                <property name="LabelProp" translatable="yes">label9</property>
+              </widget>
+              <packing>
+                <property name="X">3</property>
+                <property name="Y">41</property>
+              </packing>
+            </child>
+          </widget>
+          <packing>
+            <property name="Position">0</property>
+            <property name="AutoSize">True</property>
+            <property name="Expand">False</property>
+            <property name="Fill">False</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+    <child internal-child="ActionArea">
+      <widget class="Gtk.HButtonBox" id="dialog1_ActionArea">
+        <property name="MemberName" />
+        <property name="Spacing">10</property>
+        <property name="BorderWidth">5</property>
+        <property name="Size">1</property>
+        <property name="LayoutStyle">End</property>
+        <child>
+          <widget class="Gtk.Button" id="buttonOk">
+            <property name="MemberName" />
+            <property name="CanDefault">True</property>
+            <property name="CanFocus">True</property>
+            <property name="UseStock">True</property>
+            <property name="Type">StockItem</property>
+            <property name="StockId">gtk-ok</property>
+            <property name="ResponseId">-5</property>
+            <signal name="Clicked" handler="OnButtonOkClicked" />
+            <property name="label">gtk-ok</property>
+          </widget>
+          <packing>
+            <property name="Expand">False</property>
+            <property name="Fill">False</property>
           </packing>
         </child>
       </widget>

@@ -17,13 +17,15 @@ public partial class MainWindow
 
 	private global::Gtk.TextView textview2;
 
+	private global::Gtk.Button button1;
+
 	protected virtual void Build()
 	{
 		global::Stetic.Gui.Initialize(this);
 		// Widget MainWindow
 		this.Name = "MainWindow";
 		this.Title = global::Mono.Unix.Catalog.GetString("MainWindow");
-		this.WindowPosition = ((global::Gtk.WindowPosition)(4));
+		this.WindowPosition = ((global::Gtk.WindowPosition)(1));
 		// Container child MainWindow.Gtk.Container+ContainerChild
 		this.fixed1 = new global::Gtk.Fixed();
 		this.fixed1.Name = "fixed1";
@@ -86,23 +88,37 @@ public partial class MainWindow
 		this.GtkScrolledWindow.ShadowType = ((global::Gtk.ShadowType)(1));
 		// Container child GtkScrolledWindow.Gtk.Container+ContainerChild
 		this.textview2 = new global::Gtk.TextView();
-		this.textview2.WidthRequest = 300;
-		this.textview2.HeightRequest = 300;
+		this.textview2.WidthRequest = 750;
+		this.textview2.HeightRequest = 500;
 		this.textview2.CanFocus = true;
 		this.textview2.Name = "textview2";
 		this.GtkScrolledWindow.Add(this.textview2);
 		this.fixed1.Add(this.GtkScrolledWindow);
 		global::Gtk.Fixed.FixedChild w10 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.GtkScrolledWindow]));
-		w10.X = 40;
-		w10.Y = 101;
+		w10.X = 11;
+		w10.Y = 57;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.button1 = new global::Gtk.Button();
+		this.button1.CanFocus = true;
+		this.button1.Name = "button1";
+		this.button1.UseUnderline = true;
+		this.button1.Label = global::Mono.Unix.Catalog.GetString("Sobre");
+		global::Gtk.Image w11 = new global::Gtk.Image();
+		w11.Pixbuf = global::Stetic.IconLoader.LoadIcon(this, "gtk-about", global::Gtk.IconSize.Menu);
+		this.button1.Image = w11;
+		this.fixed1.Add(this.button1);
+		global::Gtk.Fixed.FixedChild w12 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.button1]));
+		w12.X = 363;
+		w12.Y = 5;
 		this.Add(this.fixed1);
 		if ((this.Child != null))
 		{
 			this.Child.ShowAll();
 		}
-		this.DefaultWidth = 754;
-		this.DefaultHeight = 484;
+		this.DefaultWidth = 776;
+		this.DefaultHeight = 572;
 		this.Show();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler(this.OnDeleteEvent);
+		this.button2.Clicked += new global::System.EventHandler(this.OnButton2Clicked);
 	}
 }

@@ -1,6 +1,6 @@
 /home/andrew/Projects/sistema-cadastro-livros/sistema-cadastro-livros/bin/Debug/sistema-cadastro-livros.exe
 /home/andrew/Projects/sistema-cadastro-livros/sistema-cadastro-livros/bin/Debug/sistema-cadastro-livros.pdb
-/home/andrew/Projects/sistema-cadastro-livros/sistema-cadastro-livros/obj/x86/Debug/sistema-cadastro-livros.csproj.AssemblyReference.cache
 /home/andrew/Projects/sistema-cadastro-livros/sistema-cadastro-livros/obj/x86/Debug/sistema-cadastro-livros.csproj.CoreCompileInputs.cache
 /home/andrew/Projects/sistema-cadastro-livros/sistema-cadastro-livros/obj/x86/Debug/sistema-cadastro-livros.exe
 /home/andrew/Projects/sistema-cadastro-livros/sistema-cadastro-livros/obj/x86/Debug/sistema-cadastro-livros.pdb
+/home/andrew/Projects/sistema-cadastro-livros/sistema-cadastro-livros/obj/x86/Debug/sistema-cadastro-livros.csproj.AssemblyReference.cache

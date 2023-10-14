@@ -2,6 +2,7 @@
 using Gtk;
 using BooksClasses;
 using System.Collections.Generic;
+using sistemacadastrolivros;
 
 public partial class MainWindow : Gtk.Window
 { 
@@ -9,7 +10,7 @@ public partial class MainWindow : Gtk.Window
     public MainWindow() : base(Gtk.WindowType.Toplevel)
     {
         Build();
-        List<Book> books = new List<Book>();
+
 
         TextBuffer textBuffer = new TextBuffer(new TextTagTable());
         textview2.Buffer = textBuffer;
@@ -23,14 +24,21 @@ public partial class MainWindow : Gtk.Window
         999
             );
 
-        books.Add(book1);
+        //Books.Add(book1);
 
-        textBuffer.Insert(textBuffer.EndIter, books[0].ToString());
+        //textBuffer.Insert(textBuffer.EndIter, books[0].ToString());
     }
 
     protected void OnDeleteEvent(object sender, DeleteEventArgs a)
     {
         Application.Quit();
         a.RetVal = true;
+    }
+
+    protected void OnButton2Clicked(object sender, EventArgs e)
+    {
+        NewItem item = new NewItem();
+
+        item.Show();
     }
 }

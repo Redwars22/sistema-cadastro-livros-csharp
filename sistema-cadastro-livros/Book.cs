@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using Gtk;
+
 namespace BooksClasses
 {
     public class Book
@@ -9,6 +12,7 @@ namespace BooksClasses
         public string Genre;
         public string Language;
         public int NumberOfPages;
+        private List<Book> books = new List<Book>();
 
         public Book(string Title, string ISBN, string Author, string Genre, string Language, int NumberOfPages)
         {
