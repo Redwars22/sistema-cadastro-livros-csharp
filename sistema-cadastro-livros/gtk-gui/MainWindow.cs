@@ -90,6 +90,7 @@ public partial class MainWindow
 		this.textview2 = new global::Gtk.TextView();
 		this.textview2.WidthRequest = 750;
 		this.textview2.HeightRequest = 500;
+		this.textview2.Sensitive = false;
 		this.textview2.CanFocus = true;
 		this.textview2.Name = "textview2";
 		this.GtkScrolledWindow.Add(this.textview2);
@@ -119,6 +120,7 @@ public partial class MainWindow
 		this.DefaultHeight = 572;
 		this.Show();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler(this.OnDeleteEvent);
+		this.load.Clicked += new global::System.EventHandler(this.OnLoadClicked);
 		this.button2.Clicked += new global::System.EventHandler(this.OnButton2Clicked);
 	}
 }

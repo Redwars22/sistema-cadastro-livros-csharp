@@ -30,6 +30,9 @@ namespace sistemacadastrolivros
                 LanguageInput.Text,
                 PageCount.ValueAsInt
                 );
+
+            book.Cadastrar();
+            this.Destroy();
         }
     }
 }

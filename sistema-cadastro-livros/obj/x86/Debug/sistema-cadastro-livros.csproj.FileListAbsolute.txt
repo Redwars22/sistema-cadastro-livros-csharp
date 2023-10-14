@@ -4,3 +4,7 @@
 /home/andrew/Projects/sistema-cadastro-livros/sistema-cadastro-livros/obj/x86/Debug/sistema-cadastro-livros.exe
 /home/andrew/Projects/sistema-cadastro-livros/sistema-cadastro-livros/obj/x86/Debug/sistema-cadastro-livros.pdb
 /home/andrew/Projects/sistema-cadastro-livros/sistema-cadastro-livros/obj/x86/Debug/sistema-cadastro-livros.csproj.AssemblyReference.cache
+/home/andrew/Projects/sistema-cadastro-livros/sistema-cadastro-livros/bin/Debug/Newtonsoft.Json.dll
+/home/andrew/Projects/sistema-cadastro-livros/sistema-cadastro-livros/bin/Debug/Newtonsoft.Json.pdb
+/home/andrew/Projects/sistema-cadastro-livros/sistema-cadastro-livros/bin/Debug/Newtonsoft.Json.xml
+/home/andrew/Projects/sistema-cadastro-livros/sistema-cadastro-livros/obj/x86/Debug/sistema-cadastro-livros.csproj.CopyComplete

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Gtk;
+using sistemacadastrolivros;
 
 namespace BooksClasses
 {
@@ -12,7 +13,6 @@ namespace BooksClasses
         public string Genre;
         public string Language;
         public int NumberOfPages;
-        private List<Book> books = new List<Book>();
 
         public Book(string Title, string ISBN, string Author, string Genre, string Language, int NumberOfPages)
         {
@@ -24,8 +24,23 @@ namespace BooksClasses
             this.NumberOfPages = NumberOfPages;
         }
 
-        public string ToString() {
+        public string ToString() 
+        {
             return $"{this.Title} ({this.ISBN}) - {this.Author} - {this.Genre}. {this.Language}. {this.NumberOfPages}pgs.";
+        }
+
+        public void Cadastrar()
+        {
+            Database db = new Database();
+
+            db.AddItem(
+                this.Title,
+                this.ISBN,
+                this.Author,
+                this.Genre,
+                this.Language,
+                this.NumberOfPages
+            );
         }
     }
 }

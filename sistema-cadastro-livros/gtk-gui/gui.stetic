@@ -23,6 +23,7 @@
             <property name="Icon">stock:gtk-directory Menu</property>
             <property name="Label" translatable="yes">Carregar</property>
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnLoadClicked" />
           </widget>
           <packing>
             <property name="X">5</property>
@@ -66,6 +67,7 @@
             <property name="Icon">stock:gtk-refresh Menu</property>
             <property name="Label" translatable="yes">Atualizar</property>
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnButton4Clicked" />
           </widget>
           <packing>
             <property name="X">269</property>
@@ -87,6 +89,7 @@
                 <property name="MemberName" />
                 <property name="WidthRequest">750</property>
                 <property name="HeightRequest">500</property>
+                <property name="Sensitive">False</property>
                 <property name="CanFocus">True</property>
                 <property name="ShowScrollbars">True</property>
                 <property name="Text" translatable="yes" />
