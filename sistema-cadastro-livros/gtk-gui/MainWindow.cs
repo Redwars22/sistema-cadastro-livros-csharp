@@ -19,12 +19,17 @@ public partial class MainWindow
 
 	private global::Gtk.Button button1;
 
+	private global::Gtk.Entry SearchField;
+
+	private global::Gtk.Button button7;
+
 	protected virtual void Build()
 	{
 		global::Stetic.Gui.Initialize(this);
 		// Widget MainWindow
 		this.Name = "MainWindow";
-		this.Title = global::Mono.Unix.Catalog.GetString("MainWindow");
+		this.Title = global::Mono.Unix.Catalog.GetString("Sistema de Cadastro de Livros em C#");
+		this.Icon = global::Stetic.IconLoader.LoadIcon(this, "stock_folder-copy", global::Gtk.IconSize.Menu);
 		this.WindowPosition = ((global::Gtk.WindowPosition)(1));
 		// Container child MainWindow.Gtk.Container+ContainerChild
 		this.fixed1 = new global::Gtk.Fixed();
@@ -111,16 +116,44 @@ public partial class MainWindow
 		global::Gtk.Fixed.FixedChild w12 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.button1]));
 		w12.X = 363;
 		w12.Y = 5;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.SearchField = new global::Gtk.Entry();
+		this.SearchField.WidthRequest = 200;
+		this.SearchField.CanFocus = true;
+		this.SearchField.Name = "SearchField";
+		this.SearchField.IsEditable = true;
+		this.SearchField.InvisibleChar = '•';
+		this.fixed1.Add(this.SearchField);
+		global::Gtk.Fixed.FixedChild w13 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.SearchField]));
+		w13.X = 477;
+		w13.Y = 5;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.button7 = new global::Gtk.Button();
+		this.button7.CanFocus = true;
+		this.button7.Name = "button7";
+		this.button7.UseUnderline = true;
+		this.button7.Label = global::Mono.Unix.Catalog.GetString("Pesquisar");
+		global::Gtk.Image w14 = new global::Gtk.Image();
+		w14.Pixbuf = global::Stetic.IconLoader.LoadIcon(this, "stock_search", global::Gtk.IconSize.Menu);
+		this.button7.Image = w14;
+		this.fixed1.Add(this.button7);
+		global::Gtk.Fixed.FixedChild w15 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.button7]));
+		w15.X = 682;
+		w15.Y = 5;
 		this.Add(this.fixed1);
 		if ((this.Child != null))
 		{
 			this.Child.ShowAll();
 		}
-		this.DefaultWidth = 776;
+		this.DefaultWidth = 785;
 		this.DefaultHeight = 572;
 		this.Show();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler(this.OnDeleteEvent);
 		this.load.Clicked += new global::System.EventHandler(this.OnLoadClicked);
 		this.button2.Clicked += new global::System.EventHandler(this.OnButton2Clicked);
+		this.button3.Clicked += new global::System.EventHandler(this.OnButton3Clicked);
+		this.button4.Clicked += new global::System.EventHandler(this.OnButton4Clicked);
+		this.button1.Clicked += new global::System.EventHandler(this.OnButton1Clicked);
+		this.button7.Clicked += new global::System.EventHandler(this.OnButton7Clicked);
 	}
 }

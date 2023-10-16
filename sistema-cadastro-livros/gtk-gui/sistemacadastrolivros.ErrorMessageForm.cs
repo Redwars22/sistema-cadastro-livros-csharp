@@ -18,7 +18,7 @@ namespace sistemacadastrolivros
 			// Widget sistemacadastrolivros.ErrorMessageForm
 			this.Name = "sistemacadastrolivros.ErrorMessageForm";
 			this.Title = global::Mono.Unix.Catalog.GetString("Ocorreu um problema");
-			this.Icon = global::Stetic.IconLoader.LoadIcon(this, "gtk-close", global::Gtk.IconSize.Menu);
+			this.Icon = global::Stetic.IconLoader.LoadIcon(this, "gtk-about", global::Gtk.IconSize.Menu);
 			this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 			// Internal child sistemacadastrolivros.ErrorMessageForm.VBox
 			global::Gtk.VBox w1 = this.VBox;

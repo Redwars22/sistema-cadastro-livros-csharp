@@ -32,6 +32,10 @@ namespace sistemacadastrolivros
 
 		private global::Gtk.Button NewBook;
 
+		private global::Gtk.Button SearchByISBN;
+
+		private global::Gtk.Button DeleteButton;
+
 		protected virtual void Build()
 		{
 			global::Stetic.Gui.Initialize(this);
@@ -170,15 +174,43 @@ namespace sistemacadastrolivros
 			global::Gtk.Fixed.FixedChild w14 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.NewBook]));
 			w14.X = 244;
 			w14.Y = 208;
+			// Container child fixed1.Gtk.Fixed+FixedChild
+			this.SearchByISBN = new global::Gtk.Button();
+			this.SearchByISBN.CanFocus = true;
+			this.SearchByISBN.Name = "SearchByISBN";
+			this.SearchByISBN.UseUnderline = true;
+			this.SearchByISBN.Label = global::Mono.Unix.Catalog.GetString("Pesquisar pelo ISBN");
+			global::Gtk.Image w15 = new global::Gtk.Image();
+			w15.Pixbuf = global::Stetic.IconLoader.LoadIcon(this, "gtk-find", global::Gtk.IconSize.Menu);
+			this.SearchByISBN.Image = w15;
+			this.fixed1.Add(this.SearchByISBN);
+			global::Gtk.Fixed.FixedChild w16 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.SearchByISBN]));
+			w16.X = 19;
+			w16.Y = 253;
+			// Container child fixed1.Gtk.Fixed+FixedChild
+			this.DeleteButton = new global::Gtk.Button();
+			this.DeleteButton.CanFocus = true;
+			this.DeleteButton.Name = "DeleteButton";
+			this.DeleteButton.UseUnderline = true;
+			this.DeleteButton.Label = global::Mono.Unix.Catalog.GetString("Deletar");
+			global::Gtk.Image w17 = new global::Gtk.Image();
+			w17.Pixbuf = global::Stetic.IconLoader.LoadIcon(this, "stock_trash_full", global::Gtk.IconSize.Menu);
+			this.DeleteButton.Image = w17;
+			this.fixed1.Add(this.DeleteButton);
+			global::Gtk.Fixed.FixedChild w18 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.DeleteButton]));
+			w18.X = 186;
+			w18.Y = 253;
 			this.Add(this.fixed1);
 			if ((this.Child != null))
 			{
 				this.Child.ShowAll();
 			}
 			this.DefaultWidth = 405;
-			this.DefaultHeight = 265;
+			this.DefaultHeight = 295;
 			this.Show();
 			this.NewBook.Clicked += new global::System.EventHandler(this.OnButton2Clicked);
+			this.SearchByISBN.Clicked += new global::System.EventHandler(this.OnSearchByISBNClicked);
+			this.DeleteButton.Clicked += new global::System.EventHandler(this.OnDeleteButtonClicked);
 		}
 	}
 }

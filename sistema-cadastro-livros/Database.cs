@@ -10,14 +10,60 @@ namespace sistemacadastrolivros
     public class Database
     {
         private List<Book> books = new List<Book>();
-
+        private const string FILE_PATH = "database.json";
+         
         public Database()
         {
         }
 
-        public void UpdateItem() { }
+        private void SaveToFile(string Json, string Path)
+        {
+            try
+            {
+                File.WriteAllText(Path, Json);
+            }
+            catch (Exception e)
+            {
+                ErrorMessageForm err = new ErrorMessageForm(e.Message);
+            }
+        }
 
-        public void DeleteItem() { }
+        public List<Book> Search(List<Book> Books, string Query)
+        {
+            List <Book> FoundItems = new List<Book>();
+
+            foreach(Book book in Books)
+            {
+                if(
+                    book.Title.ToLower().Trim().Contains(Query.ToLower().Trim()) ||
+                    book.Author.ToLower().Trim().Contains(Query.ToLower().Trim()) ||
+                    book.ISBN.ToLower().Trim().Equals(Query)
+                    )
+                {
+                    FoundItems.Add(book);
+                }
+            }
+
+            return FoundItems;
+        }
+
+        public void DeleteItem(Book Item) 
+        {
+            List<Book> AllBooks = this.LoadItems();
+            List<Book> FinalList = new List<Book>();
+
+            foreach (Book book in AllBooks) 
+            {
+                if (!(Item.Equals(book)))
+                {
+                    FinalList.Add(book);
+                }
+            }
+
+            string json = JsonConvert.SerializeObject(FinalList);
+
+            this.SaveToFile(json, FILE_PATH);
+        }
 
         public void AddItem(string Title, string ISBN, string Author, string Genre, string Language, int NumberOfPages)
         { 
@@ -36,13 +82,7 @@ namespace sistemacadastrolivros
 
             string filePath = "database.json"; // Replace with your desired file path
 
-            try
-            {
-                File.WriteAllText(filePath, json);
-            } catch(Exception e)
-            {
-                ErrorMessageForm err = new ErrorMessageForm(e.Message);
-            }
+            this.SaveToFile(json, filePath);
         }
 
         public List<Book> LoadItems()
@@ -60,6 +100,25 @@ namespace sistemacadastrolivros
             }
 
             return this.books;
+        }
+
+        public void UpdateItem(List<Book> BooksCol, Book Item, string ISBN)
+        {
+            foreach (Book book in BooksCol)
+            {
+                if(book.ISBN == ISBN)
+                {
+                    book.Title = Item.Title;
+                    book.Author = Item.Author;
+                    book.Genre = Item.Genre;
+                    book.Language = Item.Language;
+                    book.NumberOfPages = Item.NumberOfPages;
+                }
+            }
+
+            string json = JsonConvert.SerializeObject(this.books);
+
+            this.SaveToFile(json, FILE_PATH);
         }
     }
 }

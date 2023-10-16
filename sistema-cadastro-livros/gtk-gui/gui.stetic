@@ -4,11 +4,12 @@
     <images-root-path>..</images-root-path>
   </configuration>
   <import>
-    <widget-library name="../bin/Debug/sistema-cadastro-livros.exe" internal="true" />
+    <widget-library name="../bin/Release/sistema-cadastro-livros.exe" internal="true" />
   </import>
-  <widget class="Gtk.Window" id="MainWindow" design-size="776 572">
+  <widget class="Gtk.Window" id="MainWindow" design-size="785 572">
     <property name="MemberName" />
-    <property name="Title" translatable="yes">MainWindow</property>
+    <property name="Title" translatable="yes">Sistema de Cadastro de Livros em C#</property>
+    <property name="Icon">stock:stock_folder-copy Menu</property>
     <property name="WindowPosition">Center</property>
     <signal name="DeleteEvent" handler="OnDeleteEvent" />
     <child>
@@ -53,6 +54,7 @@
             <property name="Icon">stock:gtk-edit Menu</property>
             <property name="Label" translatable="yes">Editar</property>
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnButton3Clicked" />
           </widget>
           <packing>
             <property name="X">195</property>
@@ -109,16 +111,45 @@
             <property name="Icon">stock:gtk-about Menu</property>
             <property name="Label" translatable="yes">Sobre</property>
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnButton1Clicked" />
           </widget>
           <packing>
             <property name="X">363</property>
             <property name="Y">5</property>
           </packing>
         </child>
+        <child>
+          <widget class="Gtk.Entry" id="SearchField">
+            <property name="MemberName" />
+            <property name="WidthRequest">200</property>
+            <property name="CanFocus">True</property>
+            <property name="IsEditable">True</property>
+            <property name="InvisibleChar">•</property>
+          </widget>
+          <packing>
+            <property name="X">477</property>
+            <property name="Y">5</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="button7">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Type">TextAndIcon</property>
+            <property name="Icon">stock:stock_search Menu</property>
+            <property name="Label" translatable="yes">Pesquisar</property>
+            <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnButton7Clicked" />
+          </widget>
+          <packing>
+            <property name="X">682</property>
+            <property name="Y">5</property>
+          </packing>
+        </child>
       </widget>
     </child>
   </widget>
-  <widget class="Gtk.Window" id="sistemacadastrolivros.NewItem" design-size="405 265">
+  <widget class="Gtk.Window" id="sistemacadastrolivros.NewItem" design-size="405 295">
     <property name="MemberName" />
     <property name="Title" translatable="yes">Edição de Livro</property>
     <property name="Icon">stock:gtk-edit Menu</property>
@@ -282,13 +313,43 @@
             <property name="Y">208</property>
           </packing>
         </child>
+        <child>
+          <widget class="Gtk.Button" id="SearchByISBN">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Type">TextAndIcon</property>
+            <property name="Icon">stock:gtk-find Menu</property>
+            <property name="Label" translatable="yes">Pesquisar pelo ISBN</property>
+            <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnSearchByISBNClicked" />
+          </widget>
+          <packing>
+            <property name="X">19</property>
+            <property name="Y">253</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="DeleteButton">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Type">TextAndIcon</property>
+            <property name="Icon">stock:stock_trash_full Menu</property>
+            <property name="Label" translatable="yes">Deletar</property>
+            <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnDeleteButtonClicked" />
+          </widget>
+          <packing>
+            <property name="X">186</property>
+            <property name="Y">253</property>
+          </packing>
+        </child>
       </widget>
     </child>
   </widget>
   <widget class="Gtk.Dialog" id="sistemacadastrolivros.ErrorMessageForm" design-size="373 148">
     <property name="MemberName" />
     <property name="Title" translatable="yes">Ocorreu um problema</property>
-    <property name="Icon">stock:gtk-close Menu</property>
+    <property name="Icon">stock:gtk-about Menu</property>
     <property name="WindowPosition">CenterOnParent</property>
     <property name="Buttons">1</property>
     <property name="HelpButton">False</property>

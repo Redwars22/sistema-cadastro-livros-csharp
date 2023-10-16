@@ -23,7 +23,7 @@ public partial class MainWindow : Gtk.Window
 
     protected void OnButton2Clicked(object sender, EventArgs e)
     {
-        NewItem item = new NewItem();
+        NewItem item = new NewItem("create");
 
         item.Show();
     }
@@ -33,6 +33,8 @@ public partial class MainWindow : Gtk.Window
         Database db = new Database();
 
         books = db.LoadItems();
+
+        textBuffer.Clear();
 
         foreach (Book book in this.books)
         {
@@ -57,5 +59,35 @@ public partial class MainWindow : Gtk.Window
     protected void OnButton4Clicked(object sender, EventArgs e)
     {
         this.LoadOrUpdate();
+    }
+
+    protected void OnButton7Clicked(object sender, EventArgs e)
+    {
+        Database db = new Database();
+
+        string query = SearchField.Text;
+
+        List<Book> data = db.Search(this.books, query);
+
+        textBuffer.Clear();
+
+        foreach (Book book in data) {
+            textBuffer.Insert(textBuffer.EndIter, book.ToString() + "\n");
+        }
+    }
+
+    protected void OnButton3Clicked(object sender, EventArgs e)
+    {
+        NewItem editForm = new NewItem("edit");
+    }
+
+    protected void OnButton1Clicked(object sender, EventArgs e)
+    {
+        ErrorMessageForm err = new ErrorMessageForm(
+            "Sistema de Cadastro de Livros em C# com JSON\nMais um projeto do AndrewNation\nGitHub: https://github.com/Redwars22"
+            );
+
+        err.Show();
+        err.Title = "Sobre o App";
     }
 }

@@ -1,0 +1,7 @@
+/home/andrew/Projects/sistema-cadastro-livros/sistema-cadastro-livros/bin/Release/sistema-cadastro-livros.exe
+/home/andrew/Projects/sistema-cadastro-livros/sistema-cadastro-livros/bin/Release/Newtonsoft.Json.dll
+/home/andrew/Projects/sistema-cadastro-livros/sistema-cadastro-livros/bin/Release/Newtonsoft.Json.pdb
+/home/andrew/Projects/sistema-cadastro-livros/sistema-cadastro-livros/bin/Release/Newtonsoft.Json.xml
+/home/andrew/Projects/sistema-cadastro-livros/sistema-cadastro-livros/obj/x86/Release/sistema-cadastro-livros.csproj.CoreCompileInputs.cache
+/home/andrew/Projects/sistema-cadastro-livros/sistema-cadastro-livros/obj/x86/Release/sistema-cadastro-livros.csproj.CopyComplete
+/home/andrew/Projects/sistema-cadastro-livros/sistema-cadastro-livros/obj/x86/Release/sistema-cadastro-livros.exe
